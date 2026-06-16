@@ -15,7 +15,7 @@ with col2:
 if st.button("Search Candidates", type="primary"):
     with st.spinner("Scanning GitHub profiles... This takes a moment."):
         query = f"location:{location} language:{language}"
-        url = f"https://api.github.com/search/users?q={query}&per_page=30"
+        url = f"https://api.github.com/search/users?q={query}&per_page=100"
         
         try:
             response = requests.get(url)
